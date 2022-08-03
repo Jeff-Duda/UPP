@@ -61,6 +61,7 @@
               minrhshltr, dzice, smcwlt, suntime, fieldcapa, htopd, hbotd, htops, hbots,        &
               cuppt, dusmass, ducmass, dusmass25, ducmass25, aswintoa,rel_vort_maxhy1,          &
               maxqshltr, minqshltr, acond, sr, u10h, v10h,refd_max, w_up_max, w_dn_max,         &
+              compref_max, & ! jdduda
               up_heli_max,up_heli_min,up_heli_max03,up_heli_min03,rel_vort_max01,u10max, v10max,  &
               avgedir,avgecan,avgetrans,avgesnow,avgprec_cont,avgcprate_cont,rel_vort_max, &
               avisbeamswin,avisdiffswin,airbeamswin,airdiffswin,refdm10c_max,wspd10max, &
@@ -2091,6 +2092,11 @@
       call read_netcdf_2d_scatter(me,ncid2d,1,im,jm,jsta,jsta_2l &
        ,jend_2u,MPI_COMM_COMP,icnt,idsp,spval,VarName,refdm10c_max)
      if(debugprint)print*,'sample ',VarName,' = ',refdm10c_max(isa,jsa)
+! max hourly composite reflectivity
+      VarName='comprefmax'
+      call read_netcdf_2d_scatter(me,ncid2d,1,im,jm,jsta,jsta_2l &
+       ,jend_2u,MPI_COMM_COMP,icnt,idsp,spval,VarName,compref_max)
+     if(debugprint)print*,'sample ',VarName,' = ',compref_max(isa,jsa)
 
 ! max hourly u comp of 10m agl wind
       VarName='u10max'

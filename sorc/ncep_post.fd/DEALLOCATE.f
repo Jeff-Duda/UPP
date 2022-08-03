@@ -407,6 +407,7 @@
       deallocate(w_dn_max)
       deallocate(w_mean)
       deallocate(refd_max)
+      deallocate(compref_max) ! jdduda
       deallocate(prate_max)
       deallocate(fprate_max)
       deallocate(up_heli_max)

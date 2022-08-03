@@ -340,6 +340,7 @@
       allocate(w_dn_max(im,jsta_2l:jend_2u))
       allocate(w_mean(im,jsta_2l:jend_2u))
       allocate(refd_max(im,jsta_2l:jend_2u))
+      allocate(compref_max(im,jsta_2l:jend_2u)) ! jdduda
       allocate(prate_max(im,jsta_2l:jend_2u))
       allocate(fprate_max(im,jsta_2l:jend_2u))
       allocate(up_heli_max(im,jsta_2l:jend_2u))
@@ -359,6 +360,7 @@
           w_dn_max(i,j)=spval
           w_mean(i,j)=spval
           refd_max(i,j)=spval
+          compref_max(i,j)=spval ! jdduda
           prate_max(i,j)=spval
           fprate_max(i,j)=spval
           up_heli_max(i,j)=spval

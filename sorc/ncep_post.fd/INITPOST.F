@@ -53,7 +53,7 @@
               up_heli_max, up_heli_max16, grpl_max, up_heli, up_heli16,            &
               up_heli_min,up_heli_min16,up_heli_max02,up_heli_min02,               &
               up_heli_max03,up_heli_min03,rel_vort_max,rel_vort_max01,             &
-              wspd10umax,wspd10vmax,refdm10c_max,                                  &
+              wspd10umax,wspd10vmax,refdm10c_max,compref_max,                      & ! jdduda
               hail_max2d,hail_maxk1,hail_maxhailcast,ltg1_max,                     &
               ltg2_max, ltg3_max, nci_ltg, nca_ltg, nci_wq, nca_wq, nci_refd,      &
               u10, v10, th10, q10, tshltr, mrshltr,                                &
@@ -1480,6 +1480,15 @@ endif  ! 1==2
        end do
 !       print*,'REFDM10C_MAX at ',ii,jj,' = ',REFDM10C_MAX(ii,jj)
 
+      VarName='COMPREF_MAX'
+      call getVariable(fileName,DateStr,DataHandle,VarName,DUMMY,        &
+        IM,1,JM,1,IM,JS,JE,1)
+       do j = jsta_2l, jend_2u
+        do i = 1, im
+            COMPREF_MAX ( i, j ) = dummy ( i, j )
+        end do
+       end do
+!       print*,'COMPREF_MAX at ',ii,jj,' = ',COMPREF_MAX(ii,jj)
 
       VarName='UP_HELI_MAX'
       call getVariable(fileName,DateStr,DataHandle,VarName,DUMMY,        &

@@ -89,7 +89,7 @@
 
       use vrbls2d, only: slp, hbot, htop, cnvcfr, cprate, cnvcfr, sfcshx,sfclhx,ustar,z0,&
               sr, prec, vis, czen, pblh, pblhgust, u10, v10, avgprec, avgcprate, &
-              REF1KM_10CM,REF4KM_10CM,REFC_10CM,REFD_MAX
+              REF1KM_10CM,REF4KM_10CM,REFC_10CM,REFD_MAX,COMPREF_MAX ! jdduda
       use masks, only: lmh, gdlat, gdlon,sm,sice,dx,dy
       use params_mod, only: rd, gi, g, rog, h1, tfrz, d00, dbzmin, d608, small,&
               h100, h1m12, h99999,pi,ERAD

@@ -38,6 +38,7 @@
       ,PRATE_MAX(:,:),FPRATE_MAX(:,:)                                        &
 ! GSD addition
       ,WSPD10MAX(:,:),W_UP_MAX(:,:),W_DN_MAX(:,:),REFD_MAX(:,:)              &
+      ,COMPREF_MAX(:,:)                                                      & ! jdduda
       ,UP_HELI_MAX(:,:),UP_HELI_MAX16(:,:),GRPL_MAX(:,:),QRMAX(:,:)          &
       ,UP_HELI(:,:),UP_HELI16(:,:),LTG1_MAX(:,:),LTG2_MAX(:,:),LTG3_MAX(:,:) &
       ,UP_HELI_MIN(:,:),UP_HELI_MIN16(:,:)                                   &
